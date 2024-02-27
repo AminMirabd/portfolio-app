@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #1A202C 0%, #2D3748 100%);
+  --shadow-color: rgba(47, 92, 84, 0.3);
+  --font-primary: 'Poppins', sans-serif;
+  --transition-time: 0.3s;
+}
+
+.card {
+  border: 1px solid var(--shadow-color);
+  box-shadow: 0 0 15px 0 #8BC6EC;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: transform var(--transition-time);
+  animation: fadeIn var(--transition-time) ease-in;
+}
+
+.card:hover {
+  transform: scale(1.06);
+}
+
+.card h3 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #2C3A47;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1em;
+  color: #4B4B4B;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

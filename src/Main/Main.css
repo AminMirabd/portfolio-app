@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #EE9B83 0%, #F6D0B5 100%);
+  --shadow-color: rgba(238, 149, 126, 0.3);
+  --font-primary: 'Poppins', sans-serif;
+  --transition-time: 0.3s;
+}
+
+@keyframes nameAnimation {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes lastNameAnimation {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+h2 span.name {
+  display: inline-block;
+  animation: nameAnimation 2s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+h2 span.surname {
+  display: inline-block;
+  animation: lastNameAnimation 2s ease-in-out forwards;
+  animation-delay: 3s;
+}
+
+main {
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 420vh;
+  font-family: var(--font-primary);
+  color: #FFFFFF;
+  text-align: center;
+  overflow: hidden;
+}
+
+.element {
+  margin: 30px;
+  margin-right: 90px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px #8BC6EC;
+  width: auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: transform var(--transition-time);
+}
+
+@keyframes slideInIntro {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideInProj {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+.element.intro {
+  background-image: url('intro.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-left: 0px;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: slideInIntro 2.5s forwards;
+}
+
+.element.projs {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10px 170px 50px 60px;
+  margin-left: 130px;
+  width: 75%;
+  margin-right: 0px;
+  border-radius: 10px 0 0 10px;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  animation: slideInProj 2.5s forwards;
+}
+
+.element.contact{
+  margin-left: 80px;
+}
+
+.element.contact:hover{
+  transform: scale(1.05);
+}
+
+.intro .content {
+  margin-right: 80px;
+  width: 60%;
+}
+
+.proj .content {
+  margin-right: 0px;
+  width: 60%;
+}
+
+.intro .side-image {
+  margin-left: 50px;
+  width: 20%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.intro .side-image:hover {
+  transform: scale(1.1);
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2.4em;
+  margin-bottom: 10px;
+  color: #2C3A47;
+}
+
+p {
+  font-size: 1.1em;
+  color: #4B4B4B;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input,
+form textarea {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #218adf;
+  border-radius: 5px;
+  background-color: #FAFAFA;
+}
+
+form button {
+  width: 30%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #2e4ca7;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color var(--transition-time) ease, transform var(--transition-time) ease;
+}
+
+form button:hover {
+  background: #6e93e3;
+  transform: scale(1.05);
+}
+
+.about{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 10px 170px 50px 60px;
+  margin-left: 130px;
+  width: 75%;
+  margin-right: 0px;
+  border-radius: 10px 0 0 10px;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  animation: slideInProj 2.5s forwards;
+}
+.about h3 {
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #2C3A47;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.about p {
+  font-size: 1.1em;
+  color: #4B4B4B;
+  margin-bottom: 10px;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.text-section {
+  width: 45%;
+}
+
+.image-section {
+  width: 45%;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 10px;
+}

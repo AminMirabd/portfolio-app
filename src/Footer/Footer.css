@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: hsl(243, 57%, 47%); /* Update this color as per your preference */
+  --font-primary: 'Poppins', sans-serif;
+  --transition-time: 0.3s;
+  --text-color: #FFFFFF; /* This sets the text color to white */
+}
+
+footer {
+  background: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  bottom: 0;
+  font-family: var(--font-primary);
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #FFFFFF;
+}
